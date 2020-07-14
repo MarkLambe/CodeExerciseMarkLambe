@@ -1,0 +1,93 @@
+.testimonial-block {
+  --background-color: #f8f8f8;
+  --text-color: #6d6b69;
+  --standard-spacing: 24px;
+  --bar-color: #ed6d2d;
+
+  font-family: "Montserrat";
+  font-weight: 300;
+  padding: 20px 20%;
+  background-color: var(--background-color);
+  .testimonial-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .text-section {
+      display: flex;
+      flex-direction: column;
+      color: var(--text-color);
+      padding: 0 var(--standard-spacing);
+      max-width: 500px;
+      position: relative;
+      border-left: 2px solid var(--bar-color);
+
+      p {
+        font-family: "Roboto Slab";
+        margin-bottom: var(--standard-spacing);
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      span::before {
+        position: absolute;
+        bottom: -5px;
+        left: -6px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: var(--bar-color);
+      }
+    }
+
+    .text-section::before {
+      font-family: "u2000";
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      font-size: 3rem;
+      content: "“";
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 20px;
+      background-color: var(--bar-color);
+      border: 5px solid var(--background-color);
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 0.8rem;
+      align-items: center;
+      padding: 14px var(--standard-spacing);
+      color: #ffffff;
+      background-color: #4880da;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      cursor: pointer;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .testimonial-content {
+      flex-direction: column;
+
+      a {
+        align-self: flex-end;
+        margin-top: 40px;
+        margin-right: var(--standard-spacing);
+      }
+    }
+  }
+}
